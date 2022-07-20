@@ -1,0 +1,44 @@
+{%extends 'main.html'%}
+{% load static %}
+
+{%block content%}
+<br>
+<h2 style="text-align:center;"> About Myself </h2>
+
+<div class="row">
+    <div class = "col-md-8 offset-sm-2">
+        <div class="alert alert-info" role="alert">
+            A final-year software engineering student at the University of South Australia with great interest and passion in software development, and problem-solving. I have vast knowledge about computers and strong technical skills, particularly in modern programming languages, technologies and frameworks.
+        <br> <br>
+        I love finding optimised solutions to complex problems and aim to use technology to help those in need and to make this world a better living place for everyone.
+          </div>
+    </div>
+</div>
+
+
+<h2 style="text-align:center;"> Projects </h2>
+<div class = row>
+    <div class = "col-md-8 offset-sm-2">
+        <div class="card-deck">
+            {% for project in projects %}
+        
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                    <p class="card-text">{{ project.shortdesc }}</p>
+                    <a href="{% url 'projects' project.id %}"
+                       class="btn btn-primary">
+                        Read More
+                    </a>
+                </div>
+    
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+    
+</div>
+
+
+
+{%endblock content%}
