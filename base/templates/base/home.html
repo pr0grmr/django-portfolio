@@ -2,41 +2,97 @@
 {% load static %}
 
 {%block content%}
-<br>
-<h2 style="text-align:center;"> About Myself </h2>
 
+
+<h2 style="text-align:center;"> About Myself </h2>
 <div class="row">
-    <div class = "col-md-8 offset-sm-2">
+    <div class="col-md-8 offset-sm-2">
         <div class="alert alert-info" role="alert">
-            A final-year software engineering student at the University of South Australia with great interest and passion in software development, and problem-solving. I have vast knowledge about computers and strong technical skills, particularly in modern programming languages, technologies and frameworks.
-        <br> <br>
-        I love finding optimised solutions to complex problems and aim to use technology to help those in need and to make this world a better living place for everyone.
-          </div>
+            A final-year software engineering student at the University of South Australia with great interest and
+            passion in software development, and problem-solving. I have vast knowledge about computers and strong
+            technical skills, particularly in modern programming languages, technologies and frameworks.
+            <br> <br>
+            I love finding optimised solutions to complex problems and aim to use technology to help those in need and
+            to make this world a better living place for everyone.
+        </div>
     </div>
 </div>
 
+<div class="row">
+  <div class="col-md-8 offset-sm-2">
+      <div class="alert alert-success" role="alert">
+          Apart from technical knowledge, I have great interpersonal skills which includes Problem Solving, Communication Skills, Multitasking, Conflict Management and Public Speaking. 
+          I am a team member who thrives working in a team environment. I am fond of colloborating with others to solve complex problems. 
+      </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 offset-sm-2">
+      <div class="card border-light mb-3" >
+        <div class="card-header">Education</div>
+        <div class="card-body">
+          <h5 class="card-title">Bachelor of Software Engineering (Honours)</h5>
+          <p class="card-text">University of South Australia | Graduating December 2022 | Current GPA: 6.8 </p>
+          <h5 class="card-title">High School</h5>
+          <p class="card-text">Cambridge International School, India | Grade: 90% | </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 offset-sm-2">
+    <div class="card border-light mb-3" >
+      <div class="card-header">Work Experience</div>
+      <div class="card-body">
+        <h5 class="card-title">IT Project Coordinator - Solar Training Centre</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> Configured, administered and currently Maintaining Moodle LMS
+            environment for Solar Training Centre, including development & migration of
+            nationally accredited courses to an e-learning based platform.</li>
+          <li class="list-group-item">Worked well independently and on a team to solve various business problems.</li>
+          <li class="list-group-item">Overseen relationships with various vendors and host providers on a regular
+            basis.</li>
+          <li class="list-group-item">Responding to inquiries and requests from users for Moodle-related
+            assistance as escalated through the company's support process.</li>
+          <li class="list-group-item">Maintaining Solar Training Centre's Websites and developing user-friendly web
+            pages on a regular basis.</li>
+        </ul>
+        <br>
+        <h5 class="card-title">UniMentor - University of South Australia</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> Provided valuable assistance and resources to new students joining the University of South Australia to help with their onboarding process.</li>
+          
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <h2 style="text-align:center;"> Projects </h2>
-<div class = row>
-    <div class = "col-md-8 offset-sm-2">
+<div class=row>
+    <div class="col-md-8 offset-sm-2">
         <div class="card-deck">
             {% for project in projects %}
-        
-            <div class="card" >
+
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ project.name }}</h5>
                     <p class="card-text">{{ project.shortdesc }}</p>
-                    <a href="{% url 'projects' project.id %}"
-                       class="btn btn-primary">
+                    <a href="{% url 'projects' project.id %}" class="btn btn-primary">
                         Read More
                     </a>
                 </div>
-    
+
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-    </div>
-    
+
 </div>
 
 
